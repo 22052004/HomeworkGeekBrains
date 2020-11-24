@@ -22,7 +22,7 @@ public class Main {
         Animal newCat = createCat();
         Animal newDog = createDog();
         System.out.println("new Cat:");
-        System.out.println("Не умеет плавать, максимальнный бег: " + newCat.maxRunLength + " и максимальный прыжок: " + newCat.maxJumpHeight);
+        System.out.println("Не умеет плавать!, максимальнный бег: " + newCat.maxRunLength + " и максимальный прыжок: " + newCat.maxJumpHeight);
         newCat.run(200);
         newCat.run(250);
         newCat.swim(100);
