@@ -10,13 +10,13 @@ public abstract class Animal {
         this.maxJumpHeight = maxJumpHeight;
     }
     public  void  run(float length){
-        System.out.println("run: " + isAvailableAction(length, maxRunLength));
+        System.out.println("Бег: " + isAvailableAction(length, maxRunLength));
     }
     public void swim(float length){
-        System.out.println("swim: " + isAvailableAction(length, maxSwimLength));
+        System.out.println("Плавание: " + isAvailableAction(length, maxSwimLength));
     }
     public void jump(float height){
-        System.out.println("jump: " + isAvailableAction(height, maxJumpHeight));
+        System.out.println("Прыжок: " + isAvailableAction(height, maxJumpHeight));
     }
     private boolean isAvailableAction(float required, float expected){
         return required <= expected;
