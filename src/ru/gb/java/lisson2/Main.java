@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Cat cat = new Cat(200,2);
-        Dog dog = new Dog(500,10,0.5f);
+        Cat cat = new Cat(200, 2);
+        Dog dog = new Dog(500, 10, 0.5f);
         System.out.println("Кот:");
         cat.run(200);
         cat.run(250);
@@ -21,15 +21,15 @@ public class Main {
         dog.jump(0.1f);
         Animal newCat = createCat();
         Animal newDog = createDog();
-        System.out.println("new Cat:");
-        System.out.println("Не умеет плавать!, максимальнный бег: " + newCat.maxRunLength + " и максимальный прыжок: " + newCat.maxJumpHeight);
+        System.out.println("новый кот:");
+        System.out.println("Кот не умеет плавать, максимальнный бег: " + newCat.maxRunLength + " и максимальный прыжок: " + newCat.maxJumpHeight);
         newCat.run(200);
         newCat.run(250);
         newCat.swim(100);
         newCat.jump(1);
         newCat.jump(3);
-        System.out.println("new Dog:");
-        System.out.println("максимальное плавонье: " + newDog.maxSwimLength +", максимальный бег: " + newDog.maxRunLength + " и максимальный прыжок: " + newDog.maxJumpHeight);
+        System.out.println("новая собака:");
+        System.out.println("максимальное плавонье: " + newDog.maxSwimLength + ", максимальный бег: " + newDog.maxRunLength + " и максимальный прыжок: " + newDog.maxJumpHeight);
         newDog.run(450);
         newDog.run(550);
         newDog.swim(9);
@@ -38,7 +38,8 @@ public class Main {
         newDog.jump(0.1f);
 
     }
-    static Animal createCat(){
+
+    static Animal createCat() {
         Random random = new Random();
         float maxJump = random.nextInt(10) + random.nextFloat();
         float maxRun = random.nextInt(200) + random.nextFloat();
@@ -47,11 +48,12 @@ public class Main {
     }
     static Animal createDog(){
         Random random = new Random();
-        float maxJamp = random.nextInt(10) + random.nextFloat();
+        float maxJump = random.nextInt(10) + random.nextFloat();
         float maxRun = random.nextInt(200) + random.nextFloat();
         float maxSwim = random.nextInt(50) + random.nextFloat();
-        Dog dog = new Dog(maxRun, maxSwim, maxJamp);
+        Dog dog = new Dog(maxRun, maxSwim, maxJump);
         return dog;
     }
 }
+
 

@@ -6,7 +6,7 @@ public class Cat extends Animal{
     }
     @Override
     public void swim(float length){
-        System.out.println("Кот не может пловать!");
+        System.out.println("Кот не может плавать");
     }
 }
 
